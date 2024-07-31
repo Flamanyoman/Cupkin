@@ -3,25 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --green-main: #17c3b2;
+  --green-1: #17c3b2;
+  --green-3: #17c3b2;
+  --blue-main: #227c9d;
+  --yelow-main: #ffcb77;
+  --yelow-1: #ffcb77;
+  --baige-main: #fef9ef;
+  --red-main: #fe6d73;
+  --red-1: #fe6d73;
+  --grey-text: #141415;
+  --grey-2: #d0d0d0;
+  --grey-3: #e8e8e8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+div,
+section {
+  overflow-y: hidden;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+  transition: 2s;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+main > * {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+form {
+  padding: 10px 10px 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--gray-3);
+  border-radius: 10px;
+}
+
+form > input {
+  text-decoration: none;
+}
+
+/* Styles for screens with a width greater than 1024px */
+@media screen and (min-width: 1400px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
